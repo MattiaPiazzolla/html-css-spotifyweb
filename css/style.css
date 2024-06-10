@@ -102,8 +102,8 @@ header{
     justify-content: center;
 }
 .main-nav li{
-    padding: 5px;
-    min-width: calc(25%);/*chiedi perchè con min-width funziona e senza i testi lunghi vanno a capo */
+    padding: 5px 10px;
+    min-width: calc(25% - 10px);
     text-align: center;
 }
 
@@ -133,9 +133,15 @@ header{
 }
 
 @media screen and (min-width : 768px) {
-
     /* ADVANCED SELECTOR */
     .main-nav li{
-        min-width: calc(100% / 5);/* non capisco perche non funziona */
+        min-width: calc(100% / 5 - 10px);
+    }
+}
+
+@media screen and (min-width : 992px) {
+    /* ADVANCED SELECTOR */
+    .main-nav li{
+        min-width: auto;
     }
 }
