@@ -74,6 +74,14 @@ header{
 }
 
 /* UTILITY */
+.block{
+    display: block;
+}
+
+.width-full {
+    width: 100%;
+}
+
 .unstyle-list{
     list-style: none;
 }
@@ -84,6 +92,9 @@ header{
 }
 .txt-white{
     color: #fff;
+}
+.txt-lightgrey{
+    color: #A3A3A3;
 }
 .d-hidden{
     display: none;
@@ -112,6 +123,14 @@ header{
 .mb-20{
     margin-bottom: 20px;
 }
+.mb-10{
+    margin-bottom: 10px;
+}
+
+.mt-10{
+    margin-top: 10px;
+}
+
 .mt-5{
     margin-top: 5px;
 }
@@ -167,6 +186,10 @@ header a{
     bottom: 0px;
     left: 50%;
     transform: translateX(-50%);
+}
+
+.artist-section .cover-card img{
+    border-radius: 100%;
 }
 
 
