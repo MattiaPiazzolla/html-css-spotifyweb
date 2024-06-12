@@ -16,7 +16,6 @@ body{
 /*SECTIONS LAYOUT */
 .top-section{
     height: calc(100vh - 100px);
-    background-color: rgb(255, 99, 99);
     display: flex;
 }
 #sidebar{
@@ -31,6 +30,7 @@ body{
     justify-content: space-between;
     align-items: end;
     padding: 0 10px 30px 10px;
+    overflow-y: hidden;
 }
 .sidebar{
     display: flex;
@@ -41,6 +41,7 @@ body{
     text-align: center;
     flex-grow: 1;
     height: 100%;
+    overflow: hidden;
 }
 .main-content{
     width: calc(100vw - 33px);
@@ -161,6 +162,7 @@ header{
     border-radius: 5px;
 }
 
+
 /* LAYOUT ELEMENTS */
 .row{
     display: flex;
@@ -252,6 +254,9 @@ header{
 .me-5{
     margin-right: 5px;
 }
+.ms-5{
+    margin-left: 5px;
+}
 
 .mt-20{
     margin-top: 20px;
@@ -310,8 +315,8 @@ header a{
 }
 
 .cover-card{
-    width: calc(50% - 7.5px);
-    margin-right: 7.5px;
+    width: calc(50% - 15px);
+    margin-right: 15px;
     margin-bottom: 7.5px;
     text-align: center;
 }
@@ -323,12 +328,12 @@ header a{
 
 .cover-card h3{
     color: #fff;
-    font-size: 17.5px;
+    font-size: 15px;
 }
 
 .cover-card p{
     color: #818181;
-    font-size: 13px;
+    font-size: 9px;
     font-weight: 600;
 }
 
@@ -339,10 +344,10 @@ header a{
 .underline::after{
     content: "";
     position: absolute;
-    width: 30%;
+    width: 35%;
     height: 2px;
     background-color: #AFFD2F;
-    bottom: 0px;
+    bottom: -2.5px;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -351,16 +356,7 @@ header a{
     position: relative;
     display: inline-block;
 }
-.vertical-line-highlight::before {
-    content: "";
-    position: absolute;
-    width: 2px;
-    height: 22.5px;
-    background-color: #AFFD2F;
-    bottom: 50%;
-    left: -15.5px;
-    transform: translatey(50%);
-}
+
 
 .artist-section .cover-card img{
     border-radius: 100%;
@@ -413,7 +409,7 @@ header a{
 }
 
 .control-buttons .fa-2xl{
-    font-size: 25px;
+    font-size: 30px;
 }
 .control-buttons .fa-lg{
     font-size: 15px;
@@ -444,8 +440,20 @@ hr{
     display: none;
 }
 
+.time p{
+    font-size: 7.5px;
+    font-weight: 500;
+}
+
 .sidebar-txt{
     font-size: 10px;
+    margin-left: 3px;
+    display: none;
+    color: #818181;
+}
+
+.sidebar-txt-cta{
+    font-size: 8.5px;
     margin-left: 3px;
     display: none;
     color: #818181;
@@ -475,14 +483,38 @@ h5{
 }
 
 .top-sidebar{
-    height: 30%;
+    height: calc(100% -10px);
+    overflow-y: hidden;
 }
 
 .list-scroll{
     height: calc(35vh - 50px);
-    overflow: auto;
+    overflow-y: auto;
 }
 
+.img-card{
+    position: relative;
+}
+
+.play-hidden{
+    display: none;
+}
+
+.play-hidden .cover-card:hover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    aspect-ratio: 1/1;
+    width: 100%;
+    top: 0;
+    font-size: 75px;
+    cursor: pointer;
+}
+.cover-card:hover{
+    cursor: pointer;
+}
 
 /* MEDIA QUERY */
 
@@ -500,7 +532,7 @@ h5{
     .sidebar-options{
         align-items: center;
         justify-content: start;
-        margin-left: 15px;
+        margin-left: 10px;
         margin-right: 15px;
     }
 
@@ -527,9 +559,10 @@ h5{
         display: block;
     }
 
-    .sidebar-txt{
+    .sidebar-txt , .sidebar-txt-cta{
         display: inline-block;
     }
+
     .bottom-sidebar{
         z-index: 2;
         position: absolute;
@@ -537,6 +570,17 @@ h5{
         max-width: 150px;
         height: calc(30vh -100px);
         background-color: black;
+    }
+
+    .vertical-line-highlight::before {
+        content: "";
+        position: absolute;
+        width: 2.5px;
+        height: 22.5px;
+        background-color: #AFFD2F;
+        top: 32px;
+        left: 0px;
+        transform: translatey(50%);
     }
     
 }
@@ -547,8 +591,7 @@ h5{
         min-width: calc(100% / 5 - 10px);
     }
     .cover-card{
-        width: calc(25% - 7.5px);
-        margin-right: 7.5px;
+        width: calc(25% - 15px);
     }
     .icon-current{
         display: flex;
@@ -568,7 +611,6 @@ h5{
         min-width: auto;
     }
     .cover-card{
-        width: calc(100% / 6 - 7.5px);
-        margin-right: 7.5px;
+        width: calc(100% / 6 - 15px);
     }
 }
