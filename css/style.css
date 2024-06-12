@@ -122,6 +122,7 @@ header{
     background-color: #595959;
     padding: auto 0;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .progress-bar{
@@ -129,7 +130,44 @@ header{
     width: 25%;
     height: 3px;
     border-radius: 5px;
+    position: relative;
 }
+.time-bar:hover .progress-bar {
+    background-color: #AFFD2F;
+}
+
+.time-bar:hover .progress-bar::after {
+    display: block;
+}
+
+.progress-bar::after{
+    content: "";
+    background-color: #fff;
+    aspect-ratio: 1/1;
+    width: 10px;
+    position: absolute;
+    border-radius: 100%;
+    bottom: -100%;
+    right: 0;
+    display: none;
+}
+
+.volume-bar:hover .volume-level::after {
+    display: block;
+}
+
+.volume-level::after{
+    content: "";
+    background-color: #fff;
+    aspect-ratio: 1/1;
+    width: 10px;
+    position: absolute;
+    border-radius: 100%;
+    bottom: -100%;
+    right: 0;
+    display: none;
+}
+
 
 .volume-icons{
     width: 40%;
@@ -142,6 +180,11 @@ header{
     color: #C1C1C1;
 }
 
+.volume-icons i:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
 .volume-controll{
     width: 60%;
 }
@@ -151,6 +194,7 @@ header{
     width: 60%;
     height: 3px;
     border-radius: 5px;
+    position: relative;
 }
 
 .volume-bar{
@@ -160,8 +204,12 @@ header{
     background-color: #595959;
     padding: auto 0;
     border-radius: 5px;
+    cursor: pointer;
 }
 
+.volume-bar:hover .volume-level {
+    background-color: #AFFD2F;
+}
 
 /* LAYOUT ELEMENTS */
 .row{
@@ -292,6 +340,10 @@ header a{
     width: auto;
 }
 
+header a:hover{
+    font-size: 11px;
+}
+
 .main-nav ul{
     display: flex;
     flex-wrap: wrap;
@@ -307,6 +359,10 @@ header a{
 
 .main-nav a{
     color: #818181;
+}
+
+.main-nav a:hover{
+    color: #fff;
 }
 
 .recently-played h2{
@@ -403,14 +459,30 @@ header a{
     font-size: 12.5px;
 }
 
+.txt-lightgrey:hover{
+    color: #fff;
+}
+
 
 .control-buttons i{
     margin: 10px 10px;
 }
-
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////Chiedi come non far inluenzare gli altri bottoni con font */
 .control-buttons .fa-2xl{
     font-size: 30px;
 }
+
+.hover-buttons .fa-2xl:hover{
+    transform: scale(1.075);
+}
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////Chiedi come non far inluenzare gli altri bottoni con font */
+
 .control-buttons .fa-lg{
     font-size: 15px;
 }
@@ -419,6 +491,27 @@ header a{
     margin-bottom: 10px;
 }
 
+.playlist-add p{
+    font-weight: 600;
+}
+.playlist-add:hover{
+    cursor: pointer;
+}
+
+.playlist-add:hover p {
+    color: #fff;
+}
+.playlist-add:hover i {
+    background-color: #fff;
+}
+
+.icon-top:hover p{
+    color: #fff;
+}
+
+.icon-top:hover .icon-sidebar {
+    opacity: 1;
+}
 
 .cta-app img{
     height: 10px;
@@ -438,6 +531,11 @@ hr{
     margin-left: 15px;
     border: 100%;
     display: none;
+}
+
+.sub-info:hover p {
+    color: #fff;
+    text-decoration: underline;
 }
 
 .time p{
@@ -494,13 +592,18 @@ h5{
 
 .img-card{
     position: relative;
+    transition: all 0.5s;
 }
 
 .play-hidden{
     display: none;
 }
 
-.play-hidden .cover-card:hover{
+.cover-card:hover{
+    cursor: pointer;
+}
+
+.cover-card:hover .play-hidden{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -509,11 +612,12 @@ h5{
     aspect-ratio: 1/1;
     width: 100%;
     top: 0;
-    font-size: 75px;
+    font-size: 50px;
     cursor: pointer;
 }
-.cover-card:hover{
-    cursor: pointer;
+
+.sidebar a:hover{
+    color: #fff;
 }
 
 /* MEDIA QUERY */
