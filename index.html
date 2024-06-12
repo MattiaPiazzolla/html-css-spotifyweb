@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
     <title>Spotify</title>
 </head>
@@ -15,19 +18,50 @@
                 <div class="top-sidebar">
                     <div class="container">
                         <div class="row">
-                            <div class="sidebar-options debug logo"><a class="unstyle-link" href="#">A <span class="d-hidden">testo</span></a></div>
-                            <div class="sidebar-options debug home"></div>
-                            <div class="sidebar-options debug search"></div>
-                            <div class="sidebar-options debug library"></div>
-                            <div class="sidebar-options debug playlist d-hidden"></div>
+                            <div class="sidebar-options debug h-100 logo"><a class="unstyle-link" href="#"><img src="./img/logo-small.svg" class="icon-sidebar d-hidden-md v-middle" alt="logo-small"><span class="d-hidden"><img src="./img/logo.svg" class="logo-sidebar v-middle" alt=""></span></a></div>
+                            <div class="sidebar-options vertical-line-highlight debug h-100 v-middle">
+                                <img src="./img/home.svg" class="icon-sidebar .home" alt="">
+                                <p class="txt-white sidebar-txt v-middle">Home</p>
+                            </div>
+                            <div class="sidebar-options debug h-100 v-middle">
+                                <img src="./img/search.svg" class="icon-sidebar" alt="">
+                                <p class="sidebar-txt v-middle">Cerca</p>           
+                            </div>
+                            <div class="sidebar-options debug h-100 v-middle">
+                                <img src="./img/libreria.svg" class="icon-sidebar" alt="">
+                                <p class="sidebar-txt v-middle">La tua libreria</p>
+                            </div>
+                            <div class="sidebar-options debug h-100 v-middle playlist d-hidden">
+                                <h5 class="txt-white v-middle mb-10">PLAYLIST</h5>
+                                <div class="playlist-add flex align-center">
+                                    <i class="fa-solid fa-plus"></i>
+                                    <p class="sidebar-txt-lg v-middle">Crea Playlist</p>
+                                </div>
+                                <div class="list-scroll debug">
+                                    <ul class="unstyle-list">
+                                        <li><a class=" unstyle-link sidebar-txt" href="#">Nome Playlist</a></li>
+                                        <li><a class=" unstyle-link sidebar-txt" href="#">Nome Playlist</a></li>
+                                        <li><a class=" unstyle-link sidebar-txt" href="#">Nome Playlist</a></li>
+                                        <li><a class=" unstyle-link sidebar-txt" href="#">Nome Playlist</a></li>
+                                        <li><a class=" unstyle-link sidebar-txt" href="#">Nome Playlist</a></li>
+                                        <li><a class=" unstyle-link sidebar-txt" href="#">Nome Playlist</a></li>
+                                        <li><a class=" unstyle-link sidebar-txt" href="#">Nome Playlist</a></li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="bottom-sidebar">
                     <div class="container">
                         <div class="row">
-                            <div class="sidebar-options debug cta-app"></div>
-                            <div class="sidebar-options debug user"></div>
+                            <div class="sidebar-options v-middle cta-app">
+                                <img src="./img/download.svg" alt="">
+                            </div>
+                            <hr>
+                            <div class="sidebar-options v-middle user">
+                                <img src="./img/profile.svg" alt="">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -46,11 +80,11 @@
                         <div class="col-100">
                             <ul class="unstyle-list">
                                 <li><a class="underline  unstyle-link" href="#">IN EVIDENZA</a></li>
-                                <li><a class="debug unstyle-link" href="#">elemento</a></li>
-                                <li><a class="debug unstyle-link" href="#">elemento</a></li>
-                                <li><a class="debug unstyle-link" href="#">elemento</a></li>
-                                <li><a class="debug unstyle-link" href="#">elemento</a></li>
-                                <li><a class="debug unstyle-link " href="#">elemento</a></li>
+                                <li><a class=" unstyle-link" href="#">PODCAST</a></li>
+                                <li><a class=" unstyle-link" href="#">CLASSIFICHE</a></li>
+                                <li><a class=" unstyle-link" href="#">GENERI E MOOD</a></li>
+                                <li><a class=" unstyle-link" href="#">NUOVE USCITE</a></li>
+                                <li><a class=" unstyle-link " href="#">SCOPRI</a></li>
                             </ul>
                         </div>
                     </div>
@@ -69,28 +103,28 @@
                             <p class="grey">Subtitle</p>
                         </div>
                         <div class="cover-card">
-                            <img src="./img/metal_lifting.jpg" alt="">
-                            <h3 class="mt-5 mb-5">Hevy Metal</h3>
+                            <img src="./img/stranger.jpeg" alt="">
+                            <h3 class="mt-5 mb-5">Stranger Things Vol. 1(a Netflix Original Series Soundtrack)</h3>
+                            <p class="grey">Kyle Dixon & Michael Stein</p>
+                        </div>
+                        <div class="cover-card">
+                            <img src="./img/aquietplace.jpeg" alt="">
+                            <h3 class="mt-5 mb-5">A quet place</h3>
                             <p class="grey">Subtitle</p>
                         </div>
                         <div class="cover-card">
-                            <img src="./img/metal_lifting.jpg" alt="">
-                            <h3 class="mt-5 mb-5">Hevy Metal</h3>
+                            <img src="./img/split.jpeg" alt="">
+                            <h3 class="mt-5 mb-5">Split</h3>
                             <p class="grey">Subtitle</p>
                         </div>
                         <div class="cover-card">
-                            <img src="./img/metal_lifting.jpg" alt="">
-                            <h3 class="mt-5 mb-5">Hevy Metal</h3>
+                            <img src="./img/cure.jpeg" alt="">
+                            <h3 class="mt-5 mb-5">A cure for wellness</h3>
                             <p class="grey">Subtitle</p>
                         </div>
                         <div class="cover-card">
-                            <img src="./img/metal_lifting.jpg" alt="">
-                            <h3 class="mt-5 mb-5">Hevy Metal</h3>
-                            <p class="grey">Subtitle</p>
-                        </div>
-                        <div class="cover-card">
-                            <img src="./img/metal_lifting.jpg" alt="">
-                            <h3 class="mt-5 mb-5">Hevy Metal</h3>
+                            <img src="./img/sinister.jpeg" alt="">
+                            <h3 class="mt-5 mb-5">Sinister</h3>
                             <p class="grey">Subtitle</p>
                         </div>
                     </div>
@@ -103,12 +137,12 @@
                         </div>
                         <div class="row">
                             <div class="cover-card">
-                                <img src="./img/metal_lifting.jpg" alt="">
-                                <h3 class="mt-5 mb-5">Hevy Metal</h3>
+                                <img src="./img/radar.jpeg" alt="">
+                                <h3 class="mt-5 mb-5">Release Radar</h3>
                             </div>
                             <div class="cover-card">
-                                <img src="./img/metal_lifting.jpg" alt="">
-                                <h3 class="mt-5 mb-5">Hevy Metal</h3>
+                                <img src="./img/mixdaily.jpeg" alt="">
+                                <h3 class="mt-5 mb-5">Daily Mix 1</h3>
                             </div>
                         </div>
                     </div>
@@ -121,12 +155,12 @@
                         </div>
                         <div class="row">
                             <div class="cover-card">
-                                <img src="./img/metal_lifting.jpg" alt="">
-                                <h3 class="mt-5 mb-5">Hevy Metal</h3>
+                                <img src="./img/youg.jpeg" alt="">
+                                <h3 class="mt-5 mb-5">Lana Del Rey</h3>
                             </div>
                             <div class="cover-card">
-                                <img src="./img/metal_lifting.jpg" alt="">
-                                <h3 class="mt-5 mb-5">Hevy Metal</h3>
+                                <img src="./img/einaudi.jpeg" alt="">
+                                <h3 class="mt-5 mb-5">Ludovico Einaudi</h3>
                             </div>
                         </div>
                     </div>
@@ -136,7 +170,7 @@
     </div>
     <!-- PLAYER SECTION -->
     <div class="bottom-section">
-        <div class="debug player-left">
+        <div class=" player-left">
             <div class="-current-album">
                 <div class="row">
                     <div class="cover-current flex flex-center me-5">
@@ -145,7 +179,7 @@
                     <div class="info-current  me-5">
                         <p class="current-title txt-white">Sinister</p>
                         <p class="current-sub txt-lightgrey">Brano</p>
-                        <p class="current-sub txt-lightgrey">Nome</p>
+                        <p class="current-sub current-sub-dx txt-lightgrey">Nome</p>
                     </div>
                     <div class="icon-current">
                         <i class="fa-regular fa-heart txt-lightgrey"></i>
@@ -154,7 +188,7 @@
                 </div>
             </div>
         </div>
-        <div class="debug player-center txt-white">
+        <div class=" player-center txt-white">
             <div class="control-buttons mb-10">
                 <div class="row justify-center">
                     <i class="fa-solid fa-shuffle fa-lg"></i>
@@ -178,7 +212,7 @@
                 </div>
             </div>
         </div>
-        <div class="debug player-right">
+        <div class=" player-right">
             <div class="volume-section">
                 <div class="row">
                     <div class="volume-icons flex align-center justify-end">
