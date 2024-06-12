@@ -81,8 +81,8 @@
             <div class="main-nav">
                 <div class="container">
                     <div class="row">
-                        <div class="display-sm">
-                            
+                        <div class="display-sm burger-menu">
+                            <i class="fa-solid fa-bars"></i>
                         </div>
                         <div class="col-100 display-md">
                             <ul class="unstyle-list">
@@ -207,7 +207,7 @@
                     <div class="cover-current flex flex-center me-5">
                         <img src="./img/sinister.jpeg" alt="current cover">
                     </div>
-                    <div class="info-current  me-5">
+                    <div class="info-current me-5 display-md">
                         <p class="current-title txt-white">Sinister</p>
                         <div class="sub-info">
                             <p class="current-sub txt-lightgrey">Brano</p>
@@ -215,22 +215,22 @@
                         </div>
                     </div>
                     <div class="icon-current">
-                        <i class="fa-regular fa-heart txt-lightgrey"></i>
-                        <i class="fa-regular fa-folder txt-lightgrey"></i>
+                        <i class="fa-regular fa-heart txt-lightgrey display-md"></i>
+                        <i class="fa-regular fa-folder txt-lightgrey display-md"></i>
                     </div>
                 </div>
             </div>
         </div>
         <div class=" player-center txt-white">
-            <div class="control-buttons mb-20">
+            <div class="control-buttons">
                 <div class="row justify-center">
-                    <i class="fa-solid fa-shuffle fa-lg"></i>
-                    <i class="fa-solid fa-backward-step fa-lg"></i>
+                    <a class="unstyle-link txt-white" href=""><i class="icon-sm fa-solid fa-shuffle fa-lg"></i></a>
+                    <a class="unstyle-link txt-white" href=""><i class="icon-sm fa-solid fa-backward-step fa-lg"></i></a>
                     <div class="hover-buttons">
                         <i class="fa-regular fa-circle-play fa-2xl"></i>
                     </div>
-                    <i class="fa-solid fa-forward-step fa-lg"></i>
-                    <i class="fa-solid fa-rotate-right fa-lg"></i>
+                    <a class="unstyle-link txt-white" href=""><i class="icon-sm fa-solid fa-forward-step fa-lg"></i></a>
+                    <a class="unstyle-link txt-white" href=""><i class="icon-sm fa-solid fa-rotate-right fa-lg"></i></a>
                 </div>
             </div>
             <div class="player-time">
@@ -246,16 +246,29 @@
                     </div>
                 </div>
             </div>
+            <div class="display-sm title-player-container"><p class="title-player">Sinister</p></div>
         </div>
         <div class=" player-right">
             <div class="volume-section">
                 <div class="row">
-                    <div class="volume-icons flex align-center justify-end">
+                    <div class="volume-controll flex flex-center volume-hover">
+                        <div class="volume-bar-sm">
+                            <div class="volume-level"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="volume-icons flex justify-center align-end flex-column display-sm">
+                        <i class="fa-solid fa-volume-high"></i>
+                        <i class="fa-solid fa-desktop"></i>
+                        <i class="fa-solid fa-list"></i>
+                    </div>
+                    <div class="volume-icons flex align-center justify-end display-md">
                         <i class="fa-solid fa-list"></i>
                         <i class="fa-solid fa-desktop"></i>
                         <i class="fa-solid fa-volume-high"></i>
                     </div>
-                    <div class="volume-controll flex flex-center">
+                    <div class="volume-controll flex flex-center display-md">
                         <div class="volume-bar">
                             <div class="volume-level"></div>
                         </div>
